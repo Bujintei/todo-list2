@@ -19,7 +19,7 @@
 <script src="http://code.jqeury.com/jquery-latest.min.js"></script>
 <script>
 
-add_task(); //calling the add task function
+	add_task(); //calling the add task function
 
 	function add_task(){
 		$('.add-new-task').submit(function() {
@@ -34,5 +34,17 @@ add_task(); //calling the add task function
 			return false;
 		});
 	}
+
+	$('.delete-button').click(function(){
+		var current_element = $(this);
+		var task_id = $(this).attr('id');
+		
+		$.post('inludes/delete-task.php', {id: task_id}, function(){
+			current_element.parent().fadeOut("fast", function(){
+			$(this).remove();
+			});
+		});
+	});	
 </script>
+
 </html>
