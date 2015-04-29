@@ -7,6 +7,8 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> Bruhndoonie's To-Do List </title>
+        <title> Bruhndonie's To-Do List </title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Sancreek' rel='stylesheet' type='text/css'>
     </head>
-    <body>
+    <body id="Account">

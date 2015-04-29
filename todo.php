@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Bruhndoonie's To-Do List </title>
+	<title> Bruhndonie's To-Do List </title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Sancreek' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body id="steam">
 	<div class="wrap">
 		<div class="task-list">
+		<div id="title">
+			<p><u>To Do App</u></p>
+		</div>
 			<ul>	
 				<?php require("includes/connect.php"); 
-				$mysqli = new mysqli('localhost', 'root', 'root', 'todo');
+				$mysqli = new mysqli('localhost', 'root', 'root', 'todo2');
 				$query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";
 				if ($result = $mysqli->query($query)) {
 					$numrows = $result->num_rows;
@@ -31,7 +36,7 @@
 			</ul>
 		</div>
 		<form class = "add-new-task" autocomplete="off">
-			<input type="text" name="new-task" placeholder="Add new item..."/>
+			<input type="text" name="new-task" size="50" placeholder="Add new item..."/>
 		</form>
 	</div>
 </body>
